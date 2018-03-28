@@ -1,0 +1,237 @@
+//-----------------------------------------------------------
+//
+//-----------------------------------------------------------
+class BazookExplosionEmitter extends Emitter;
+
+//_____________________________________________________________________________
+event PostBeginPlay()
+{
+    Spawn(class'BazookExplosionOverlayEmitter',self,, location, Rotation);
+}
+
+/*
+    Begin Object Class=SpriteEmitter Name=BazookExplosionEmitterA
+        RespawnDeadParticles=False
+        UseSizeScale=True
+        UseRegularSizeScale=False
+        MaxParticles=1
+        SecondsBeforeInactive=10000.0
+        SizeScale(1)=(relativetime=0.20,RelativeSize=6.00)
+        SizeScale(2)=(relativetime=0.50,RelativeSize=2.00)
+        SizeScale(3)=(relativetime=1.00,RelativeSize=3.00)
+        Texture=Texture'XIIICine.effets.eclairblanc'
+        LifetimeRange=(Min=0.20,Max=0.20)
+    End Object
+    Emitters(0)=SpriteEmitter'BazookExplosionEmitterA'
+    Begin Object Class=SpriteEmitter Name=BazookExplosionEmitterB
+        FadeOut=True
+        RespawnDeadParticles=False
+        SpinParticles=True
+        UseSizeScale=True
+        UseRegularSizeScale=False
+        AutomaticInitialSpawning=False
+        FadeOutFactor=(W=2.00)
+        FadeOutStartTime=0.50
+        MaxParticles=10
+        SecondsBeforeInactive=10000.0
+        StartLocationRange=(X=(Min=-200.00,Max=200.00),Y=(Min=-100.00,Max=100.00),Z=(Min=-50.00,Max=50.00))
+        SpinsPerSecondRange=(X=(Min=-0.10,Max=1.00),Y=(Min=-0.10,Max=1.00))
+        SizeScale(1)=(relativetime=0.20,RelativeSize=3.00)
+        SizeScale(2)=(relativetime=0.30,RelativeSize=1.00)
+        SizeScale(3)=(relativetime=1.00,RelativeSize=0.50)
+        StartSizeRange=(X=(Min=75.00,Max=150.00),Y=(Min=75.00,Max=150.00),Z=(Min=75.00))
+        InitialParticlesPerSecond=65.00
+        Texture=Texture'XIIICine.extinct_exploAD'
+        LifetimeRange=(Min=1.50,Max=1.50)
+        StartVelocityRange=(X=(Min=-50.00,Max=50.00),Y=(Min=-50.00,Max=50.00),Z=(Min=30.00,Max=50.00))
+    End Object
+    Emitters(1)=SpriteEmitter'BazookExplosionEmitterB'
+    Begin Object Class=SpriteEmitter Name=BazookExplosionEmitterC
+        Acceleration=(X=10.00,Y=10.00,Z=-45.00)
+        UseColorScale=true
+        FadeOut=True
+        FadeIn=True
+        RespawnDeadParticles=False
+        SpinParticles=True
+        UseSizeScale=True
+        UseRegularSizeScale=False
+        UniformSize=True
+        AutomaticInitialSpawning=False
+        ColorScale(0)=(Color=(B=255,G=255,R=255))
+        ColorScale(1)=(relativetime=0.10,Color=(B=112,G=122,R=122))
+        ColorScale(2)=(relativetime=0.50,Color=(B=115,G=120,R=128))
+        ColorScale(3)=(relativetime=1.00,Color=(B=109,G=124,R=121))
+        FadeOutStartTime=3.50
+        FadeInEndTime=0.10
+        MaxParticles=20
+        SecondsBeforeInactive=10000.0
+        StartLocationOffset=(Z=-50.00)
+        StartLocationRange=(X=(Min=-200.00,Max=200.00),Y=(Min=-200.00,Max=200.00),Z=(Min=-50.00,Max=50.00))
+        SpinsPerSecondRange=(X=(Min=-0.10,Max=0.10),Y=(Min=-0.10,Max=0.10))
+        SizeScale(1)=(relativetime=0.10,RelativeSize=3.00)
+        SizeScale(2)=(relativetime=0.350000,RelativeSize=2.00)
+        SizeScale(3)=(relativetime=0.80,RelativeSize=1.40)
+        SizeScale(4)=(relativetime=1.00,RelativeSize=1.10)
+        InitialParticlesPerSecond=100.00
+        DrawStyle=PTDS_Brighten
+        Texture=Texture'XIIICine.effets.mist3'
+        LifetimeRange=(Min=6.00,Max=7.00)
+        StartVelocityRange=(X=(Min=-50.00,Max=50.00),Y=(Min=-50.00,Max=50.00),Z=(Min=100.00,Max=120.00))
+        VelocityLossRange=(Z=(Min=1.00,Max=1.00))
+    End Object
+    Emitters(2)=SpriteEmitter'BazookExplosionEmitterC'
+    Begin Object Class=MeshEmitter Name=BazookExplosionEmitterD
+        StaticMesh=StaticMesh'StaticExplosifs.grenadfragment'
+        UseMeshBlendMode=False
+        Acceleration=(X=1.00,Y=1.00,Z=-1400.00)
+        UseCollision=True
+        FadeOut=True
+        RespawnDeadParticles=False
+        SpinParticles=True
+        DampRotation=True
+        UseSizeScale=True
+        UseRegularSizeScale=False
+        AutomaticInitialSpawning=False
+        DampingFactorRange=(X=(Min=0.80,Max=0.90),Y=(Min=0.50,Max=0.50),Z=(Min=0.10,Max=0.20))
+        FadeOutStartTime=15.00
+        MaxParticles=10
+        SecondsBeforeInactive=10000.0
+        StartLocationRange=(X=(Min=-10.00,Max=10.00),Y=(Min=-10.00,Max=10.00),Z=(Min=-10.00,Max=10.00))
+        SpinsPerSecondRange=(X=(Min=-3.00,Max=3.00),Y=(Min=-3.00,Max=3.00),Z=(Min=-1.00,Max=1.00))
+        StartSpinRange=(X=(Min=-32767.00,Max=32767.00),Y=(Max=512.00))
+        RotationDampingFactorRange=(X=(Min=0.20,Max=0.30),Y=(Min=0.30,Max=0.30),Z=(Min=0.10,Max=0.20))
+        StartSizeRange=(X=(Min=1.00,Max=5.00),Y=(Min=1.00,Max=5.00),Z=(Min=2.00,Max=5.00))
+        InitialParticlesPerSecond=1000.00
+        DrawStyle=PTDS_AlphaBlend
+        LifetimeRange=(Min=5.00,Max=5.00)
+        StartVelocityRange=(X=(Min=-3000.00,Max=3000.00),Y=(Min=-3000.00,Max=3000.00),Z=(Min=400.00,Max=700.00))
+        VelocityLossRange=(X=(Min=1.00,Max=1.00),Y=(Min=1.00,Max=1.00))
+    End Object
+    Emitters(3)=MeshEmitter'BazookExplosionEmitterD'
+*/
+
+defaultproperties
+{
+     Begin Object Class=SpriteEmitter Name=BazookExplosionEmitterA
+         RespawnDeadParticles=False
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         Initialized=True
+         MaxParticles=1
+         SizeScale(1)=(relativetime=0.200000,RelativeSize=6.000000)
+         SizeScale(2)=(relativetime=0.500000,RelativeSize=2.000000)
+         SizeScale(3)=(relativetime=1.000000,RelativeSize=3.000000)
+         Texture=Texture'XIIICine.effets.eclairblanc'
+         SecondsBeforeInactive=10000.000000
+         LifetimeRange=(Min=0.200000,Max=0.200000)
+         Name="BazookExplosionEmitterA"
+     End Object
+     Emitters(0)=SpriteEmitter'XIII.BazookExplosionEmitter.BazookExplosionEmitterA'
+     Begin Object Class=SpriteEmitter Name=BazookExplosionEmitterB
+         FadeOut=True
+         RespawnDeadParticles=False
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         AutomaticInitialSpawning=False
+         SymmetryU=True
+         SymmetryV=True
+         RandomSymmetryU=True
+         RandomSymmetryV=True
+         Initialized=True
+         FadeOutFactor=(W=2.000000)
+         FadeOutStartTime=0.500000
+         MaxParticles=8
+         StartLocationRange=(X=(Min=-200.000000,Max=200.000000),Y=(Min=-100.000000,Max=100.000000),Z=(Min=-50.000000,Max=50.000000))
+         SpinsPerSecondRange=(X=(Min=-0.100000,Max=1.000000),Y=(Min=-0.100000,Max=1.000000))
+         SizeScale(1)=(relativetime=0.200000,RelativeSize=3.000000)
+         SizeScale(2)=(relativetime=0.300000,RelativeSize=1.000000)
+         SizeScale(3)=(relativetime=1.000000,RelativeSize=0.500000)
+         StartSizeRange=(X=(Min=75.000000,Max=150.000000),Y=(Min=75.000000,Max=150.000000),Z=(Min=75.000000))
+         CenterU=0.050000
+         CenterV=0.050000
+         InitialParticlesPerSecond=50.000000
+         Texture=Texture'XIIICine.extinct_exploAD'
+         SecondsBeforeInactive=10000.000000
+         LifetimeRange=(Min=1.500000,Max=1.500000)
+         StartVelocityRange=(X=(Min=-50.000000,Max=50.000000),Y=(Min=-50.000000,Max=50.000000),Z=(Min=30.000000,Max=50.000000))
+         Name="BazookExplosionEmitterB"
+     End Object
+     Emitters(1)=SpriteEmitter'XIII.BazookExplosionEmitter.BazookExplosionEmitterB'
+     Begin Object Class=SpriteEmitter Name=BazookExplosionEmitterC
+         Acceleration=(X=10.000000,Y=10.000000,Z=-45.000000)
+         UseColorScale=True
+         FadeOut=True
+         FadeIn=True
+         RespawnDeadParticles=False
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         AutomaticInitialSpawning=False
+         SymmetryU=True
+         SymmetryV=True
+         RandomSymmetryU=True
+         RandomSymmetryV=True
+         Initialized=True
+         ColorScale(0)=(Color=(B=255,G=255,R=255))
+         ColorScale(1)=(relativetime=0.100000,Color=(B=112,G=122,R=122))
+         ColorScale(2)=(relativetime=0.500000,Color=(B=115,G=120,R=128))
+         ColorScale(3)=(relativetime=1.000000,Color=(B=109,G=124,R=121))
+         FadeOutStartTime=3.500000
+         FadeInEndTime=0.100000
+         MaxParticles=10
+         StartLocationOffset=(Z=-50.000000)
+         StartLocationRange=(X=(Min=-200.000000,Max=200.000000),Y=(Min=-200.000000,Max=200.000000),Z=(Min=-50.000000,Max=50.000000))
+         SpinsPerSecondRange=(X=(Min=-0.100000,Max=0.100000),Y=(Min=-0.100000,Max=0.100000))
+         SizeScale(1)=(relativetime=0.100000,RelativeSize=3.000000)
+         SizeScale(2)=(relativetime=0.350000,RelativeSize=2.000000)
+         SizeScale(3)=(relativetime=0.800000,RelativeSize=1.400000)
+         SizeScale(4)=(relativetime=1.000000,RelativeSize=1.100000)
+         CenterU=0.100000
+         CenterV=0.100000
+         InitialParticlesPerSecond=100.000000
+         DrawStyle=PTDS_Brighten
+         Texture=Texture'XIIICine.effets.mist3'
+         SecondsBeforeInactive=10000.000000
+         LifetimeRange=(Min=6.000000,Max=7.000000)
+         StartVelocityRange=(X=(Min=-50.000000,Max=50.000000),Y=(Min=-50.000000,Max=50.000000),Z=(Min=100.000000,Max=120.000000))
+         VelocityLossRange=(Z=(Min=1.000000,Max=1.000000))
+         Name="BazookExplosionEmitterC"
+     End Object
+     Emitters(2)=SpriteEmitter'XIII.BazookExplosionEmitter.BazookExplosionEmitterC'
+     Begin Object Class=MeshEmitter Name=BazookExplosionEmitterD
+         StaticMesh=StaticMesh'StaticExplosifs.grenadfragment'
+         UseMeshBlendMode=False
+         Acceleration=(X=1.000000,Y=1.000000,Z=-1400.000000)
+         UseCollision=True
+         UseMaxCollisions=True
+         FadeOut=True
+         RespawnDeadParticles=False
+         SpinParticles=True
+         DampRotation=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         AutomaticInitialSpawning=False
+         Initialized=True
+         DampingFactorRange=(X=(Min=0.800000,Max=0.900000),Y=(Min=0.500000,Max=0.500000),Z=(Min=0.100000,Max=0.200000))
+         MaxCollisions=(Min=1.000000,Max=3.000000)
+         FadeOutStartTime=15.000000
+         MaxParticles=3
+         StartLocationRange=(X=(Min=-10.000000,Max=10.000000),Y=(Min=-10.000000,Max=10.000000),Z=(Min=-10.000000,Max=10.000000))
+         SpinsPerSecondRange=(X=(Min=-3.000000,Max=3.000000),Y=(Min=-3.000000,Max=3.000000),Z=(Min=-1.000000,Max=1.000000))
+         StartSpinRange=(X=(Min=-32767.000000,Max=32767.000000),Y=(Max=512.000000))
+         RotationDampingFactorRange=(X=(Min=0.200000,Max=0.300000),Y=(Min=0.300000,Max=0.300000),Z=(Min=0.100000,Max=0.200000))
+         StartSizeRange=(X=(Min=1.000000,Max=5.000000),Y=(Min=1.000000,Max=5.000000),Z=(Min=2.000000,Max=5.000000))
+         InitialParticlesPerSecond=1000.000000
+         DrawStyle=PTDS_AlphaBlend
+         SecondsBeforeInactive=20.000000
+         LifetimeRange=(Min=5.000000,Max=5.000000)
+         StartVelocityRange=(X=(Min=-3000.000000,Max=3000.000000),Y=(Min=-3000.000000,Max=3000.000000),Z=(Min=400.000000,Max=700.000000))
+         VelocityLossRange=(X=(Min=1.000000,Max=1.000000),Y=(Min=1.000000,Max=1.000000))
+         Name="BazookExplosionEmitterD"
+     End Object
+     Emitters(3)=MeshEmitter'XIII.BazookExplosionEmitter.BazookExplosionEmitterD'
+     RemoteRole=ROLE_None
+     CollisionRadius=500.000000
+     CollisionHeight=500.000000
+}

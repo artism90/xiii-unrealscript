@@ -1,0 +1,38 @@
+//===============================================================================
+//  Johansson.
+//===============================================================================
+
+class Johansson extends TousLesPersos;
+
+#EXEC MESH  MODELIMPORT MESH=JohanssonM MODELFILE=models\Johansson.PSK LODSTYLE=10
+#EXEC MESH  ORIGIN MESH=JohanssonM X=0 Y=0 Z=79.439 YAW=192 PITCH=0 ROLL=0
+
+#EXEC MESHMAP SCALE MESHMAP=JohanssonM X=1.00 Y=1.00 Z=1.00
+
+#EXEC ANIM IMPORT ANIM=JOHANSSONspeA ANIMFILE=models\JOHANSSONspe.PSA COMPRESS=1 MAXKEYS=999999 IMPORTSEQS=1
+#EXEC ANIM DIGEST ANIM=JOHANSSONspeA USERAWINFO VERBOSE
+
+#EXEC ANIM IMPORT ANIM=JohanssonspeA ANIMFILE=models\Johanssonspe.PSA COMPRESS=1 MAXKEYS=999999 IMPORTSEQS=1
+#EXEC ANIM DIGEST ANIM=JohanssonspeA USERAWINFO VERBOSE
+
+#EXEC ANIM IMPORT ANIM=JohanssonSpeA ANIMFILE=models\JohanssonSpe.PSA COMPRESS=1 MAXKEYS=999999 IMPORTSEQS=1
+#EXEC ANIM DIGEST ANIM=JohanssonSpeA USERAWINFO VERBOSE
+
+#EXEC MESH    DEFAULTANIM MESH=JohanssonM ANIM=MigA
+
+#EXEC TEXTURE IMPORT NAME=JohanssonTex  FILE=Textures\Johansson.tga  GROUP=Skins
+#EXEC OBJ LOAD FILE=XIIISound.uax PACKAGE=XIIISound
+#EXEC TEXTURE SETHITSOUND TEXTURE=JohanssonTex SOUND=ImpCdvr__hPlayImpCdvr
+
+
+#EXEC MESHMAP SETTEXTURE MESHMAP=JohanssonM NUM=0 TEXTURE=JohanssonTex
+
+#EXEC ANIM NOTIFY ANIM=JohanssonSpeA SEQ=CourseSeringue TIME=0.250 FUNCTION=PlayFootStep
+#EXEC ANIM NOTIFY ANIM=JohanssonSpeA SEQ=CourseSeringue TIME=0.750 FUNCTION=PlayFootStep
+#EXEC ANIM NOTIFY ANIM=JohanssonSpeA SEQ=Marche TIME=0.010 FUNCTION=PlayFootStep
+#EXEC ANIM NOTIFY ANIM=JohanssonSpeA SEQ=Marche TIME=0.500 FUNCTION=PlayFootStep
+
+
+defaultproperties
+{
+}

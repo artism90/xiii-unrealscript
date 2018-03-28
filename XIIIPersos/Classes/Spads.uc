@@ -1,0 +1,32 @@
+//===============================================================================
+//  Spads.
+//===============================================================================
+
+class Spads extends TousLesPersos;
+
+#EXEC MESH  MODELIMPORT MESH=SpadsM MODELFILE=models\Spads.PSK LODSTYLE=10
+#EXEC MESH  ORIGIN MESH=SpadsM X=0 Y=0 Z=79.496 YAW=192 PITCH=0 ROLL=0
+
+#EXEC MESHMAP SCALE MESHMAP=SpadsM X=1.00 Y=1.00 Z=1.00
+
+#EXEC ANIM IMPORT ANIM=spadsspeA ANIMFILE=models\spadsspe.PSA COMPRESS=1 MAXKEYS=999999 IMPORTSEQS=1
+#EXEC ANIM DIGEST ANIM=spadsspeA USERAWINFO VERBOSE
+
+#EXEC ANIM IMPORT ANIM=SpadsSpeA ANIMFILE=models\SpadsSpe.PSA COMPRESS=1 MAXKEYS=999999 IMPORTSEQS=1
+#EXEC ANIM DIGEST ANIM=SpadsSpeA USERAWINFO VERBOSE
+
+#EXEC MESH    DEFAULTANIM MESH=SpadsM ANIM=MigA
+
+#EXEC TEXTURE IMPORT NAME=SPADSTex  FILE=Textures\Spads.tga  GROUP=Skins
+#EXEC MESHMAP SETTEXTURE MESHMAP=SpadsM NUM=0 TEXTURE=SpadsTex
+#EXEC OBJ LOAD FILE=XIIISound.uax PACKAGE=XIIISound
+#EXEC TEXTURE SETHITSOUND TEXTURE=SpadsTex SOUND=ImpCdvr__hPlayImpCdvr
+
+
+#EXEC ANIM NOTIFY ANIM=SpadsSpeA SEQ=Talkie3 TIME=0.133 FUNCTION=PlayFootStep
+#EXEC ANIM NOTIFY ANIM=SpadsSpeA SEQ=Talkie3 TIME=0.633 FUNCTION=PlayFootStep
+
+
+defaultproperties
+{
+}

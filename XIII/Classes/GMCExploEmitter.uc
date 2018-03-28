@@ -1,0 +1,376 @@
+class GMCExploEmitter extends Emitter;
+
+EVENT PostBeginPlay()
+{
+	LOCAL DamageTrigger DT;
+
+	DT=spawn(class'DamageTrigger');
+	if ( DT!=none )
+	{
+		DT.SetCollisionSize( 160, 96 );
+	}
+}
+
+
+
+defaultproperties
+{
+     Begin Object Class=SpriteEmitter Name=GMCEEA
+         UseDirectionAs=PTDU_Normal
+         FadeOut=True
+         FadeIn=True
+         RespawnDeadParticles=False
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         UniformSize=False
+         AutomaticInitialSpawning=False
+         SymmetryU=True
+         SymmetryV=True
+         RandomSymmetryU=True
+         RandomSymmetryV=True
+         Initialized=True
+         FadeOutStartTime=0.500000
+         MaxParticles=10
+         StartLocationOffset=(Z=-110.000000)
+         UseRotationFrom=PTRS_Actor
+         SpinsPerSecondRange=(X=(Min=0.100000,Max=0.100000))
+         SizeScale(1)=(relativetime=1.000000,RelativeSize=10.000000)
+         StartSizeRange=(X=(Min=200.000000,Max=200.000000))
+         InitialParticlesPerSecond=10.000000
+         Texture=Texture'XIIICine.effets.Explosion'
+         SecondsBeforeInactive=0.800000
+         LifetimeRange=(Min=0.800000,Max=0.800000)
+         Name="GMCEEA"
+     End Object
+     Emitters(0)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEA'
+     Begin Object Class=SpriteEmitter Name=GMCEEB
+         UseDirectionAs=PTDU_Normal
+         FadeOut=True
+         RespawnDeadParticles=False
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         SymmetryU=True
+         SymmetryV=True
+         RandomSymmetryU=True
+         RandomSymmetryV=True
+         Initialized=True
+         FadeOutStartTime=0.500000
+         MaxParticles=7
+         UseRotationFrom=PTRS_Actor
+         SpinsPerSecondRange=(X=(Min=0.100000,Max=0.100000))
+         SizeScale(1)=(relativetime=1.000000,RelativeSize=10.000000)
+         DrawStyle=PTDS_Darken
+         Texture=Texture'XIIICine.effets.explogrenadeB'
+         LifetimeRange=(Min=1.000000,Max=1.000000)
+         Name="GMCEEB"
+     End Object
+     Emitters(1)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEB'
+     Begin Object Class=SpriteEmitter Name=GMCEEC
+         UseColorScale=True
+         FadeOut=True
+         FadeIn=True
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         UniformSize=False
+         SymmetryU=True
+         SymmetryV=True
+         RandomSymmetryU=True
+         RandomSymmetryV=True
+         Initialized=True
+         ColorScale(0)=(Color=(R=255))
+         ColorScale(1)=(relativetime=0.500000,Color=(B=66,G=210,R=253))
+         ColorScale(2)=(relativetime=1.000000,Color=(R=255))
+         ColorScaleRepeats=2.000000
+         FadeOutStartTime=5.000000
+         FadeInEndTime=3.000000
+         MaxParticles=10
+         StartLocationOffset=(Z=50.000000)
+         StartLocationRange=(X=(Min=-150.000000,Max=150.000000),Y=(Min=-150.000000,Max=150.000000))
+         UseRotationFrom=PTRS_Actor
+         SpinCCWorCW=(X=0.000000,Y=0.000000,Z=0.000000)
+         SpinsPerSecondRange=(X=(Min=0.100000,Max=0.100000))
+         SizeScale(0)=(RelativeSize=0.500000)
+         SizeScale(1)=(relativetime=0.500000,RelativeSize=1.500000)
+         SizeScale(2)=(relativetime=1.000000,RelativeSize=1.500000)
+         Texture=Texture'XIIICine.effets.explogrenadeB'
+         SecondsBeforeInactive=10.000000
+         LifetimeRange=(Min=10.000000,Max=10.000000)
+         StartVelocityRange=(Z=(Min=50.000000,Max=50.000000))
+         Name="GMCEEC"
+     End Object
+     Emitters(2)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEC'
+     Begin Object Class=SpriteEmitter Name=GMCEED
+         FadeOut=True
+         FadeIn=True
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         UniformSize=False
+         Initialized=True
+         FadeOutStartTime=5.000000
+         FadeInEndTime=0.500000
+         MaxParticles=10
+         StartLocationOffset=(Z=10.000000)
+         StartLocationRange=(X=(Min=-100.000000,Max=100.000000),Y=(Min=-100.000000,Max=100.000000))
+         UseRotationFrom=PTRS_Actor
+         SpinsPerSecondRange=(X=(Min=0.200000,Max=0.200000))
+         SizeScale(0)=(RelativeSize=0.500000)
+         SizeScale(1)=(relativetime=0.500000,RelativeSize=2.000000)
+         SizeScale(2)=(relativetime=1.000000,RelativeSize=2.000000)
+         DrawStyle=PTDS_Darken
+         Texture=Texture'XIIICine.effets.explogrenadeB'
+         SecondsBeforeInactive=10.000000
+         LifetimeRange=(Min=10.000000,Max=10.000000)
+         StartVelocityRange=(Z=(Min=50.000000,Max=100.000000))
+         Name="GMCEED"
+     End Object
+     Emitters(3)=SpriteEmitter'XIII.GMCExploEmitter.GMCEED'
+     Begin Object Class=SpriteEmitter Name=GMCEEE
+         UseColorScale=True
+         FadeOut=True
+         FadeIn=True
+         SpinParticles=True
+         Initialized=True
+         ColorScale(0)=(Color=(G=128,R=255))
+         ColorScale(1)=(relativetime=0.500000,Color=(B=4,G=134,R=251))
+         ColorScale(2)=(relativetime=1.000000,Color=(G=128,R=255))
+         ColorScaleRepeats=2.000000
+         FadeOutStartTime=1.000000
+         FadeInEndTime=1.000000
+         MaxParticles=2
+         StartLocationOffset=(Z=50.000000)
+         UseRotationFrom=PTRS_Actor
+         SpinsPerSecondRange=(X=(Min=0.250000,Max=0.250000))
+         StartSizeRange=(X=(Min=150.000000,Max=250.000000))
+         Texture=Texture'XIIICine.effets.etincelle'
+         SecondsBeforeInactive=4.000000
+         StartVelocityRange=(Z=(Min=50.000000,Max=50.000000))
+         Name="GMCEEE"
+     End Object
+     Emitters(4)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEE'
+     Begin Object Class=SpriteEmitter Name=GMCEEF
+         UseDirectionAs=PTDU_Normal
+         UseColorScale=True
+         FadeOut=True
+         FadeIn=True
+         SpinParticles=True
+         Initialized=True
+         ColorScale(0)=(Color=(G=128,R=255))
+         ColorScale(1)=(relativetime=1.000000,Color=(G=121,R=255))
+         FadeOutStartTime=1.000000
+         FadeInEndTime=1.000000
+         MaxParticles=3
+         StartLocationOffset=(Z=-120.000000)
+         StartLocationRange=(X=(Min=-100.000000,Max=100.000000),Y=(Min=-100.000000,Max=100.000000))
+         UseRotationFrom=PTRS_Actor
+         SpinsPerSecondRange=(X=(Min=0.500000,Max=0.500000))
+         StartSizeRange=(X=(Min=200.000000,Max=300.000000))
+         Texture=Texture'XIIICine.fumee_explochim'
+         SecondsBeforeInactive=2.000000
+         LifetimeRange=(Min=2.000000,Max=2.000000)
+         Name="GMCEEF"
+     End Object
+     Emitters(5)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEF'
+     Begin Object Class=SpriteEmitter Name=GMCEEG
+         UseColorScale=True
+         FadeOut=True
+         FadeIn=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         UniformSize=False
+         UseRandomSubdivision=True
+         NoSynchroAnim=True
+         SymmetryU=True
+         RandomSymmetryU=True
+         Initialized=True
+         ColorScale(0)=(Color=(B=170,G=255,R=255))
+         ColorScale(1)=(relativetime=1.000000,Color=(B=3,G=121,R=252))
+         FadeOutStartTime=2.000000
+         FadeInEndTime=2.000000
+         MaxParticles=10
+         StartLocationOffset=(Z=50.000000)
+         StartLocationRange=(Y=(Min=-100.000000,Max=200.000000),Z=(Min=-50.000000,Max=50.000000))
+         UseRotationFrom=PTRS_Actor
+         SizeScale(1)=(relativetime=1.000000,RelativeSize=2.000000)
+         StartSizeRange=(X=(Min=80.000000,Max=80.000000))
+         Texture=Texture'XIIICine.feuAD00'
+         SecondsBeforeInactive=4.000000
+         Name="GMCEEG"
+     End Object
+     Emitters(6)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEG'
+     Begin Object Class=SpriteEmitter Name=GMCEEH
+         Acceleration=(Z=50.000000)
+         UseColorScale=True
+         FadeOut=True
+         FadeIn=True
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         UniformSize=False
+         SymmetryU=True
+         SymmetryV=True
+         RandomSymmetryU=True
+         RandomSymmetryV=True
+         Initialized=True
+         ColorScale(0)=(Color=(G=128,R=255))
+         ColorScale(1)=(relativetime=1.000000,Color=(B=1,G=77,R=254))
+         FadeOutStartTime=3.500000
+         FadeInEndTime=2.000000
+         MaxParticles=10
+         StartLocationRange=(X=(Min=-30.000000,Max=30.000000))
+         UseRotationFrom=PTRS_Actor
+         SpinCCWorCW=(X=1.000000,Y=1.000000,Z=1.000000)
+         SpinsPerSecondRange=(X=(Min=0.200000,Max=0.200000))
+         SizeScale(1)=(relativetime=0.500000,RelativeSize=0.500000)
+         SizeScale(2)=(relativetime=1.000000,RelativeSize=2.000000)
+         StartSizeRange=(X=(Min=70.000000),Y=(Min=70.000000))
+         Texture=Texture'XIIICine.effets.explogrenadeB'
+         SecondsBeforeInactive=4.000000
+         StartVelocityRange=(X=(Min=-50.000000,Max=50.000000),Y=(Min=50.000000,Max=100.000000),Z=(Min=-80.000000,Max=-80.000000))
+         Name="GMCEEH"
+     End Object
+     Emitters(7)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEH'
+     Begin Object Class=SpriteEmitter Name=GMCEEI
+         Acceleration=(Z=50.000000)
+         FadeOut=True
+         FadeIn=True
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         UniformSize=False
+         Initialized=True
+         FadeOutStartTime=3.500000
+         FadeInEndTime=2.000000
+         MaxParticles=10
+         StartLocationRange=(X=(Min=-30.000000,Max=30.000000))
+         UseRotationFrom=PTRS_Actor
+         SpinCCWorCW=(X=1.000000,Y=1.000000,Z=1.000000)
+         SpinsPerSecondRange=(X=(Min=0.200000,Max=0.200000))
+         SizeScale(1)=(relativetime=0.500000,RelativeSize=0.500000)
+         SizeScale(2)=(relativetime=1.000000,RelativeSize=2.000000)
+         StartSizeRange=(X=(Min=70.000000),Y=(Min=70.000000))
+         DrawStyle=PTDS_Darken
+         Texture=Texture'XIIICine.effets.explogrenadeB'
+         SecondsBeforeInactive=4.000000
+         StartVelocityRange=(X=(Min=-50.000000,Max=50.000000),Y=(Min=50.000000,Max=100.000000),Z=(Min=-80.000000,Max=-80.000000))
+         Name="GMCEEI"
+     End Object
+     Emitters(8)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEI'
+     Begin Object Class=SpriteEmitter Name=GMCEEJ
+         Acceleration=(Z=50.000000)
+         UseColorScale=True
+         FadeOut=True
+         FadeIn=True
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         UniformSize=False
+         SymmetryU=True
+         SymmetryV=True
+         RandomSymmetryU=True
+         RandomSymmetryV=True
+         Initialized=True
+         ColorScale(0)=(Color=(G=128,R=255))
+         ColorScale(1)=(relativetime=1.000000,Color=(B=1,G=77,R=254))
+         FadeOutStartTime=3.500000
+         FadeInEndTime=2.000000
+         MaxParticles=10
+         StartLocationRange=(X=(Min=-30.000000,Max=30.000000))
+         UseRotationFrom=PTRS_Actor
+         SpinCCWorCW=(X=0.000000,Y=0.000000,Z=0.000000)
+         SpinsPerSecondRange=(X=(Min=0.200000,Max=0.200000))
+         SizeScale(1)=(relativetime=0.500000,RelativeSize=0.500000)
+         SizeScale(2)=(relativetime=1.000000,RelativeSize=2.000000)
+         StartSizeRange=(X=(Min=70.000000),Y=(Min=70.000000))
+         Texture=Texture'XIIICine.effets.explogrenadeB'
+         SecondsBeforeInactive=4.000000
+         StartVelocityRange=(X=(Min=-50.000000,Max=50.000000),Y=(Min=-50.000000,Max=-100.000000),Z=(Min=-80.000000,Max=-80.000000))
+         Name="GMCEEJ"
+     End Object
+     Emitters(9)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEJ'
+     Begin Object Class=SpriteEmitter Name=GMCEEK
+         Acceleration=(Z=50.000000)
+         FadeOut=True
+         FadeIn=True
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         UniformSize=False
+         Initialized=True
+         FadeOutStartTime=3.500000
+         FadeInEndTime=2.000000
+         MaxParticles=10
+         StartLocationRange=(X=(Min=-30.000000,Max=30.000000))
+         UseRotationFrom=PTRS_Actor
+         SpinCCWorCW=(X=0.000000,Y=0.000000,Z=0.000000)
+         SpinsPerSecondRange=(X=(Min=0.200000,Max=0.200000))
+         SizeScale(1)=(relativetime=0.500000,RelativeSize=0.500000)
+         SizeScale(2)=(relativetime=1.000000,RelativeSize=2.000000)
+         StartSizeRange=(X=(Min=70.000000),Y=(Min=70.000000))
+         DrawStyle=PTDS_Darken
+         Texture=Texture'XIIICine.effets.explogrenadeB'
+         SecondsBeforeInactive=4.000000
+         StartVelocityRange=(X=(Min=-50.000000,Max=50.000000),Y=(Min=-50.000000,Max=-100.000000),Z=(Min=-80.000000,Max=-80.000000))
+         Name="GMCEEK"
+     End Object
+     Emitters(10)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEK'
+     Begin Object Class=SpriteEmitter Name=GMCEEL
+         FadeOut=True
+         RespawnDeadParticles=False
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         AutomaticInitialSpawning=False
+         Initialized=True
+         ColorScale(0)=(Color=(B=68,G=215,R=251))
+         ColorScale(1)=(relativetime=1.000000,Color=(R=255))
+         ColorScaleRepeats=5.000000
+         FadeOutStartTime=0.250000
+         MaxParticles=1
+         UseRotationFrom=PTRS_Actor
+         SizeScale(1)=(relativetime=1.000000,RelativeSize=3.000000)
+         StartSizeRange=(X=(Max=150.000000))
+         InitialParticlesPerSecond=25.000000
+         DrawStyle=PTDS_AlphaBlend
+         Texture=Texture'XIIICine.effets.Baommm'
+         LifetimeRange=(Min=0.500000,Max=0.500000)
+         StartVelocityRange=(Z=(Min=750.000000,Max=750.000000))
+         Name="GMCEEL"
+     End Object
+     Emitters(11)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEL'
+     Begin Object Class=SpriteEmitter Name=GMCEEM
+         FadeOut=True
+         RespawnDeadParticles=False
+         SpinParticles=True
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         AutomaticInitialSpawning=False
+         Initialized=True
+         ColorScale(0)=(Color=(B=196,G=255,R=255))
+         ColorScale(1)=(relativetime=1.000000,Color=(B=168,G=168,R=255))
+         ColorScaleRepeats=10.000000
+         MaxParticles=50
+         StartLocationOffset=(Z=-50.000000)
+         UseRotationFrom=PTRS_Actor
+         SpinsPerSecondRange=(X=(Min=0.100000,Max=0.100000))
+         SizeScale(1)=(relativetime=0.500000,RelativeSize=3.000000)
+         SizeScale(2)=(relativetime=1.000000,RelativeSize=2.000000)
+         StartSizeRange=(X=(Min=50.000000))
+         InitialParticlesPerSecond=500.000000
+         Texture=Texture'XIIICine.explo_vehicule01'
+         SecondsBeforeInactive=2.500000
+         LifetimeRange=(Min=2.500000,Max=2.500000)
+         StartVelocityRange=(X=(Min=-800.000000,Max=800.000000),Y=(Min=-800.000000,Max=800.000000),Z=(Max=200.000000))
+         VelocityLossRange=(X=(Min=1.000000,Max=1.000000),Y=(Min=1.000000,Max=1.000000))
+         Name="GMCEEM"
+     End Object
+     Emitters(12)=SpriteEmitter'XIII.GMCExploEmitter.GMCEEM'
+     bActorLight=True
+     CollisionRadius=1000.000000
+     CollisionHeight=1000.000000
+     LightType=LT_Steady
+     LightRadius=16
+     ColCategory=ColType_NoCol
+}

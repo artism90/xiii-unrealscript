@@ -1,0 +1,134 @@
+//-----------------------------------------------------------
+//
+//-----------------------------------------------------------
+class DecoBottleImpactEmitter extends BaseDecoEmitters;
+
+
+defaultproperties
+{
+     Begin Object Class=SpriteEmitter Name=DecoBottleImpactEmitterA
+         Acceleration=(Z=10.000000)
+         UseColorScale=True
+         FadeOut=True
+         RespawnDeadParticles=False
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         AutomaticInitialSpawning=False
+         SymmetryU=True
+         SymmetryV=True
+         RandomSymmetryU=True
+         RandomSymmetryV=True
+         Initialized=True
+         ColorScale(0)=(Color=(B=166,G=166))
+         ColorScale(1)=(relativetime=0.200000,Color=(B=187,G=187))
+         ColorScale(2)=(relativetime=0.220000,Color=(B=255,G=255,R=255))
+         ColorScale(3)=(relativetime=0.800000,Color=(B=128,G=128,R=64))
+         ColorScale(4)=(relativetime=1.000000,Color=(B=30,G=60))
+         FadeOutFactor=(W=2.000000)
+         FadeOutStartTime=0.300000
+         FadeInEndTime=0.100000
+         MaxParticles=2
+         SpinsPerSecondRange=(X=(Min=0.200000,Max=0.200000),Y=(Min=0.200000,Max=0.200000),Z=(Min=0.200000,Max=0.200000))
+         SizeScale(1)=(relativetime=0.050000,RelativeSize=5.000000)
+         SizeScale(2)=(relativetime=0.110000,RelativeSize=1.000000)
+         SizeScale(3)=(relativetime=0.300000,RelativeSize=2.000000)
+         SizeScale(4)=(relativetime=1.000000)
+         StartSizeRange=(X=(Min=10.000000,Max=10.000000),Y=(Min=10.000000,Max=10.000000),Z=(Min=10.000000,Max=10.000000))
+         InitialParticlesPerSecond=20.000000
+         DrawStyle=PTDS_Brighten
+         Texture=Texture'XIIICine.effets.eclairblanc2'
+         SecondsBeforeInactive=1000.000000
+         LifetimeRange=(Min=0.500000,Max=0.500000)
+         Name="DecoBottleImpactEmitterA"
+     End Object
+     Emitters(0)=SpriteEmitter'XIII.DecoBottleImpactEmitter.DecoBottleImpactEmitterA'
+     Begin Object Class=SpriteEmitter Name=DecoBottleImpactEmitterB
+         Acceleration=(Z=-100.000000)
+         FadeOut=True
+         RespawnDeadParticles=False
+         UseSizeScale=True
+         UseRegularSizeScale=False
+         AutomaticInitialSpawning=False
+         Initialized=True
+         FadeOutStartTime=0.800000
+         MaxParticles=1
+         StartLocationOffset=(Z=10.000000)
+         SizeScale(0)=(RelativeSize=1.500000)
+         SizeScale(1)=(relativetime=0.300000,RelativeSize=1.500000)
+         SizeScale(2)=(relativetime=0.500000,RelativeSize=1.000000)
+         SizeScale(3)=(relativetime=0.600000,RelativeSize=1.100000)
+         SizeScale(4)=(relativetime=0.700000,RelativeSize=1.000000)
+         SizeScale(5)=(relativetime=0.800000,RelativeSize=1.100000)
+         SizeScale(6)=(relativetime=0.900000,RelativeSize=1.000000)
+         SizeScale(7)=(relativetime=1.000000,RelativeSize=1.000000)
+         StartSizeRange=(X=(Min=20.000000,Max=20.000000),Y=(Min=20.000000,Max=20.000000),Z=(Min=20.000000,Max=20.000000))
+         InitialParticlesPerSecond=10.000000
+         DrawStyle=PTDS_AlphaBlend
+         Texture=Texture'XIIICine.effets.death4'
+         SecondsBeforeInactive=1000.000000
+         LifetimeRange=(Min=1.000000,Max=1.000000)
+         InitialDelayRange=(Min=0.100000,Max=0.100000)
+         StartVelocityRange=(Z=(Min=90.000000,Max=90.000000))
+         VelocityLossRange=(Z=(Min=1.000000,Max=1.000000))
+         Name="DecoBottleImpactEmitterB"
+     End Object
+     Emitters(1)=SpriteEmitter'XIII.DecoBottleImpactEmitter.DecoBottleImpactEmitterB'
+     Begin Object Class=SpriteEmitter Name=DecoBottleImpactEmitterC
+         Acceleration=(X=-200.000000,Y=5.000000,Z=-500.000000)
+         UseColorScale=True
+         RespawnDeadParticles=False
+         SpinParticles=True
+         AutomaticInitialSpawning=False
+         SymmetryU=True
+         SymmetryV=True
+         RandomSymmetryU=True
+         RandomSymmetryV=True
+         Initialized=True
+         ColorScale(0)=(Color=(B=128,G=128,R=64))
+         ColorScale(1)=(relativetime=1.000000,Color=(B=64,G=128))
+         MaxParticles=16
+         StartLocationRange=(X=(Min=-20.000000,Max=20.000000),Y=(Min=-20.000000,Max=20.000000),Z=(Min=-20.000000,Max=20.000000))
+         SpinsPerSecondRange=(X=(Min=-1.000000,Max=1.000000),Y=(Min=-1.000000,Max=1.000000),Z=(Min=-1.000000,Max=1.000000))
+         StartSizeRange=(X=(Min=1.000000,Max=3.000000),Y=(Min=1.000000,Max=3.000000),Z=(Min=1.000000,Max=3.000000))
+         InitialParticlesPerSecond=50.000000
+         DrawStyle=PTDS_Brighten
+         Texture=Texture'XIIICine.effets.glass13'
+         TextureUSubdivisions=2
+         TextureVSubdivisions=2
+         SecondsBeforeInactive=1000.000000
+         LifetimeRange=(Min=1.000000,Max=1.000000)
+         StartVelocityRange=(X=(Min=-80.000000,Max=80.000000),Y=(Min=-80.000000,Max=80.000000),Z=(Min=100.000000,Max=300.000000))
+         VelocityLossRange=(X=(Min=1.000000,Max=1.000000),Y=(Min=1.000000,Max=1.000000),Z=(Min=1.000000,Max=1.000000))
+         Name="DecoBottleImpactEmitterC"
+     End Object
+     Emitters(2)=SpriteEmitter'XIII.DecoBottleImpactEmitter.DecoBottleImpactEmitterC'
+     Begin Object Class=SpriteEmitter Name=DecoBottleImpactEmitterD
+         FadeOut=True
+         FadeIn=True
+         RespawnDeadParticles=False
+         SpinParticles=True
+         UseSizeScale=True
+         AutomaticInitialSpawning=False
+         Initialized=True
+         FadeOutStartTime=0.300000
+         FadeInEndTime=0.100000
+         MaxParticles=10
+         StartLocationRange=(X=(Min=-20.000000,Max=20.000000),Y=(Min=-20.000000,Max=20.000000),Z=(Max=20.000000))
+         SpinsPerSecondRange=(X=(Max=0.100000),Y=(Max=0.100000))
+         SizeScale(0)=(relativetime=0.100000,RelativeSize=0.100000)
+         SizeScale(1)=(relativetime=0.200000,RelativeSize=1.000000)
+         SizeScale(2)=(relativetime=1.000000)
+         StartSizeRange=(X=(Min=2.000000,Max=5.000000),Y=(Min=2.000000,Max=5.000000),Z=(Min=2.000000,Max=5.000000))
+         InitialParticlesPerSecond=10.000000
+         DrawStyle=PTDS_Brighten
+         Texture=Texture'XIIICine.effets.eclairblanc'
+         SecondsBeforeInactive=1000.000000
+         LifetimeRange=(Min=0.500000,Max=0.800000)
+         InitialDelayRange=(Min=0.100000,Max=0.100000)
+         StartVelocityRange=(X=(Min=-10.000000,Max=10.000000),Y=(Min=-10.000000,Max=10.000000),Z=(Min=-10.000000,Max=10.000000))
+         Name="DecoBottleImpactEmitterD"
+     End Object
+     Emitters(3)=SpriteEmitter'XIII.DecoBottleImpactEmitter.DecoBottleImpactEmitterD'
+     bIgnoreVignetteAlpha=True
+     RemoteRole=ROLE_None
+}
